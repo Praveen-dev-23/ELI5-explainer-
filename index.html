@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELI5 Explainer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="new-chat-btn" title="New Explainer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                New explanation
+            </div>
+            <div class="history-list">
+                <p class="history-empty">No history yet</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <button class="menu-btn" id="menuBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <h2>ELI5 Explainer</h2>
+                <button id="eli5Toggle" class="mode-toggle active">
+                    <span class="toggle-icon">👶</span> 
+                    <span class="toggle-text">ELI5 Mode</span>
+                </button>
+            </header>
+
+            <div class="chat-container" id="chatContainer">
+                <!-- Welcome Message -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="greeting">
+                        <h1>Hello there,</h1>
+                        <h1 class="gradient-text">What can I simplify for you today?</h1>
+                    </div>
+                </div>
+                
+                <!-- Chat messages will be injected here -->
+            </div>
+
+            <div class="input-container">
+                <div class="input-box">
+                    <textarea id="inputText" placeholder="Enter complex text you want explained like you're 5..." rows="1"></textarea>
+                    <button id="sendBtn" class="send-btn" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </div>
+                <p class="disclaimer">ELI5 explainer may make mistakes. Consider verifying important information.</p>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Markdown Parser (marked.js) for formatting AI responses -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- DOMPurify for sanitizing HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
